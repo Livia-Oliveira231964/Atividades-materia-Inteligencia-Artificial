@@ -18,8 +18,9 @@ Acessando o arquivo **`Exercícios_Python_LiviaOliveiraA6`**, você terá acesso
 ### Fontes de Consulta
 
 Para a realização das atividades, foram utilizados:
-- 💬 Fóruns de programação (W3Schools, GeeksforGeeks, Documentação Oficial do Python)
-- 📚 Livros didáticos
-- 🎥 Videoaulas do YouTube
+-  Fóruns de programação (W3Schools, GeeksforGeeks, Documentação Oficial do Python)
+-  Livros didáticos
+-  Videoaulas do YouTube
 
+---
 ### ATIVIDADE 2: 
