@@ -23,4 +23,5 @@ Para a realização das atividades, foram utilizados:
 -  Videoaulas do YouTube
 
 ---
-### ATIVIDADE 2: 
+### ATIVIDADE 2: Lista Data Sciense
+
