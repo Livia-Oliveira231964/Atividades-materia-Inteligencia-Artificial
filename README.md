@@ -1,5 +1,4 @@
 # Atividades da Matéria de Inteligência Artificial
-
 Neste repositório estão reunidas todas as atividades resolvidas durante a disciplina de **Inteligência Artificial**, ministrada pelo professor **Fabiano**.
 
 ---
@@ -7,8 +6,7 @@ Neste repositório estão reunidas todas as atividades resolvidas durante a disc
 ### ATIVIDADE 1: Lista de Exercícios de Python (Básico ao Intermediário)
 
 Com o objetivo de nivelar a capacidade de lógica de programação para avançar nos estudos de *Data Science* no decorrer da disciplina, foi desenvolvida uma lista com **50 exercícios**.
-
-Acessando o arquivo **`Exercícios_Python_LiviaOliveiraA6`**, você terá acesso a:
+  Acessando o arquivo **`Exercícios_Python_LiviaOliveiraA6`**, você terá acesso a:
 *  Enunciados de todos os exercícios;
 *  Códigos desenvolvidos e comentados;
 *  Explicações de como os exercícios foram feitos.
@@ -24,4 +22,12 @@ Para a realização das atividades, foram utilizados:
 
 ---
 ### ATIVIDADE 2: Lista Data Sciense
+Afim de introduzir as bibliotecas usadas para analise, manipulação e mineração de dados, foi desenvolvida uma lista de **80 exercícios** das 4 principais bibliotecas (20 exercícios de cada).
+  Acessando o arquivo **`Atividade_DataScience_LiviaOliveira_6A.ipynb`**, você terá acesso a:
+*  Enunciados de todos os exercícios;
+*  Códigos desenvolvidos e comentados;
+*  Explicações de como os exercícios foram feitos.
+
+### Fonte de consulta
+-PDF disponibilizado pelo Professor Fabiano.
 
