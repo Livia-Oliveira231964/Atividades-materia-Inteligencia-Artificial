@@ -29,5 +29,5 @@ Afim de introduzir as bibliotecas usadas para analise, manipulação e mineraç�
 *  Explicações de como os exercícios foram feitos.
 
 ### Fonte de consulta
--PDF disponibilizado pelo Professor Fabiano.
+- PDF disponibilizado pelo Professor Fabiano.
 
