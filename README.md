@@ -27,7 +27,22 @@ Afim de introduzir as bibliotecas usadas para analise, manipulação e mineraç�
 *  Enunciados de todos os exercícios;
 *  Códigos desenvolvidos e comentados;
 *  Explicações de como os exercícios foram feitos.
+  
+---
 
 ### Fonte de consulta
 - PDF disponibilizado pelo Professor Fabiano.
+
+---
+### ATIVIDADE 3: SVM IRIS
+Introdução aos modelos de I.A com o dataset Iris, o modelo usado foi o **Support Vector Machine**
+  Acessando o arquivo `reavalia-o-do-dataset-iris-liviaoliveira-6a-manh.ipynb` você terá acesso a:
+  * Documentação baseada no modelo da atividade guiada passada pelo professor;
+  * Códigos desenvolvidos e comentados;
+
+---
+### Fontes de consulta
+- Notebook disponibilizado pelo professor;
+- Dataset disponibilizado pelo professor;
+- PDFs disponibilizados pelo professor. 
 
