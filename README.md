@@ -44,5 +44,16 @@ Introdução aos modelos de I.A com o dataset Iris, o modelo usado foi o **Suppo
 ### Fontes de consulta
 - Notebook disponibilizado pelo professor;
 - Dataset disponibilizado pelo professor;
-- PDFs disponibilizados pelo professor. 
+- PDFs disponibilizados pelo professor.
 
+---
+### ATIVIDADE 4: 
+Treino modelo SVM com dataset Winsconsin
+  Acessando o arquivo `atividadesvm-liviaoliveira-6a-manha.ipynb` Você terá acesso a:
+  * Documentação resumida sobre cada passo da atividade;
+  * Códigos desenvolvidos
+
+---
+### Fontes de consulta
+- Dataset disponibilizado pelo professor;
+- Atividade anterior.
