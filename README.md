@@ -57,3 +57,15 @@ Treino modelo SVM com dataset Winsconsin
 ### Fontes de consulta
 - Dataset disponibilizado pelo professor;
 - Atividade anterior.
+
+---
+### SUMMIT
+Como quinta atividade o professor nos inscreveu no SUMMIT da universidae com o objeto de pesquisa o dataset das eleições de 1936 e como uma revista errou por muito quem seria o vencedor. 
+  Acessando o arquivo `Salvando_a_eleição_Norte_americana_de_1936_com_DataScience_LiviaOliveira_6A.ipynb` você terá acesso a:
+  * Documentação extensa sobre cada passo da analise preditiva das eleições de 1924 à 1932;
+  * Códigos desenvolvidos.
+---
+### Fontes de consulta
+- Planilhas disponibilizadas pelo professor;
+- PDFs de contexto da época disponibilizados pelo professor;
+- Arquivos de áudio disponibilizados pelo porfessor.
