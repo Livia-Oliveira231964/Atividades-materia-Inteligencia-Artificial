@@ -69,3 +69,14 @@ Como quinta atividade o professor nos inscreveu no SUMMIT da universidae com o o
 - Planilhas disponibilizadas pelo professor;
 - PDFs de contexto da época disponibilizados pelo professor;
 - Arquivos de áudio disponibilizados pelo porfessor.
+
+---
+### Dataset Vinho
+Como sexta atividade o professor nos deixou escolher um dataset na plataforma *kaggle* e trabalhar em cima dele os modelos de SVM, atém de fazer um relatório sobre esse estudo e uma apresentação de 10 slides contendo gráficos, métodos utilizados, resultados, a conclusão que chegamos.
+  Acessando o arquivo `estudo-de-caso-vinho-Livia_Oliveira-6a-manha.ipynb` você terá acesso a:
+  * Documentação em markdonw do passo a passo dessa pesquisa de forma detalhada;
+  * Códigos desenvolvidos.
+---
+### Fontes de consulta
+- Outros notebooks desse dataset;
+- Fóruns on-line.
