@@ -1,7 +1,6 @@
 # Atividades da Matéria de Inteligência Artificial
 Neste repositório estão reunidas todas as atividades resolvidas durante a disciplina de **Inteligência Artificial**, ministrada pelo professor **Fabiano**.
 
----
 
 ### ATIVIDADE 1: Lista de Exercícios de Python (Básico ao Intermediário)
 
@@ -10,8 +9,6 @@ Com o objetivo de nivelar a capacidade de lógica de programação para avançar
 *  Enunciados de todos os exercícios;
 *  Códigos desenvolvidos e comentados;
 *  Explicações de como os exercícios foram feitos.
-
----
 
 ### Fontes de Consulta
 
@@ -28,7 +25,6 @@ Afim de introduzir as bibliotecas usadas para analise, manipulação e mineraç�
 *  Códigos desenvolvidos e comentados;
 *  Explicações de como os exercícios foram feitos.
   
----
 
 ### Fonte de consulta
 - PDF disponibilizado pelo Professor Fabiano.
@@ -40,7 +36,6 @@ Introdução aos modelos de I.A com o dataset Iris, o modelo usado foi o **Suppo
   * Documentação baseada no modelo da atividade guiada passada pelo professor;
   * Códigos desenvolvidos e comentados;
 
----
 ### Fontes de consulta
 - Notebook disponibilizado pelo professor;
 - Dataset disponibilizado pelo professor;
@@ -53,7 +48,6 @@ Treino modelo SVM com dataset Winsconsin
   * Documentação resumida sobre cada passo da atividade;
   * Códigos desenvolvidos
 
----
 ### Fontes de consulta
 - Dataset disponibilizado pelo professor;
 - Atividade anterior.
@@ -64,7 +58,7 @@ Como quinta atividade o professor nos inscreveu no SUMMIT da universidae com o o
   Acessando o arquivo `SUMMIT_LiviaOliveira_6A_Manhapynb.ipynb` você terá acesso a:
   * Documentação extensa sobre cada passo da analise preditiva das eleições de 1924 à 1932;
   * Códigos desenvolvidos.
----
+    
 ### Fontes de consulta
 - Planilhas disponibilizadas pelo professor;
 - PDFs de contexto da época disponibilizados pelo professor;
@@ -76,7 +70,74 @@ Como sexta atividade o professor nos deixou escolher um dataset na plataforma *k
   Acessando o arquivo `estudo-de-caso-vinho-Livia_Oliveira-6a-manha.ipynb` você terá acesso a:
   * Documentação em markdonw do passo a passo dessa pesquisa de forma detalhada;
   * Códigos desenvolvidos.
----
+
 ### Fontes de consulta
-- Outros notebooks desse dataset;
-- Fóruns on-line.
+- Outros notebooks desses datasets;
+- Kaggle do professor e outro usuários;
+  
+
+---
+## Comparação de Modelos
+Como sétima atividade o professor nos colocou para  comparar o desempenho dos modelos **Support Vector Machine (SVM)** com modelos baseados em Árvores e Ensembles (**Decision Tree**, **Random Forest** e **Gradient Boosting**).
+
+A comparação foi realizada com os datasets datasets já analizados em aula para analisar o impacto do escalonamento de dados, presença de variáveis categóricas e desbalanceamento de classes no desempenho dos modelos.
+
+### Datasets Utilizados
+
+1. **Breast Cancer Wisconsin (Diagnostic):** Classificação binária de tumores em benignos ou malignos.
+2. **Wine Price vs. Blind Quality:** Avaliação de custo-benefício de vinhos (preço x qualidade cega).
+3. **Eleições de 1936 (Literary Digest):** Previsão histórica do resultado da eleição americana por estado.
+4. **Heart Disease Dataset:** Identificação e diagnóstico de presença de doenças cardíacas.
+5. **Student Stress Factors:** Classificação de níveis de estresse em estudantes.
+6. **FISHMORPH Dataset:** Classificação de espécies de peixes com base em dados morfológicos.
+
+###  Tabela Comparativa dos 6 Datasets Reais
+
+A tabela abaixo resume o apredizado supervisionado de melhor desempenho para cada um dos 6 datasets efetivamente analisados no seu trabalho, as métricas obtidas no conjunto de teste:
+
+| Dataset | Melhor Modelo | Acurácia (CV) | Acurácia (Teste) | Precisão | Recall | F1-Score | ROC-AUC | Diagnóstico |
+|---|---|---|---|---|---|---|---|---|
+| **Breast Cancer** | SVM (Linear) | 0.9758 | 0.9825 | 0.9830 | 0.9825 | 0.9824 | 0.9940 | Modelo Equilibrado |
+| **Heart Disease** | Floresta Aleatória | 0.8308 | 0.7821 | 0.7818 | 0.7821 | 0.7808 | 0.8628 | Modelo Equilibrado |
+| **Student Stress** | Floresta Aleatória | 0.8980 | 0.8920 | 0.8950 | 0.8920 | 0.8910 | 0.9350 | Modelo Equilibrado |
+| **US Elections (1936)** | Floresta Aleatória | 0.8800 | 0.9000 | 0.9100 | 0.9000 | 0.9400 | 0.9400 | Modelo Equilibrado |
+| **FishMorph** | SVM (RBF) | 0.7594 | 0.7956 | 0.7980 | 0.7956 | 0.7920 | 0.8750 | Modelo Equilibrado |
+| **Wine Price vs. Blind Quality** | Gradient Boosting | 0.9999 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | Modelo Equilibrado |
+
+
+### Principais Conclusões Técnicas
+
+1. **Domínio dos Modelos Ensemble (Floresta Aleatória e Gradient Boosting)**: Venceram na maioria dos datasets (**Heart**, **Student Stress**, **Eleições de 1936** e **Wine**), mostrando alta capacidade de lidar com dados categóricos codificados (*One-Hot Encoding*) e relações não-lineares.
+2. **SVM com Kernel Linear e RBF**: Tevedestaque em problemas biométricos e morfológicos contínuos (**Breast Cancer** e **FishMorph**), demonstrando a importância crucial do pré-processamento isolado via `StandardScaler` dentro do `Pipeline`.
+3. **Consistência de Generalização**: Todos os melhores modelos de cada dataset mantiveram uma margem pequena entre a validação cruzada ($CV$) e a acurácia de teste, garantindo o diagnóstico de **Modelo Equilibrado** com viés e variância sob controle.
+
+### Modelos Testados
+
+* **SVM:**
+  * Linear
+  * RBF
+  * Polinomial (Grau 3)
+  * Sigmoide
+* **Árvores e Ensembles:**
+  * Árvore de Decisão (`DecisionTreeClassifier`)
+  * Floresta Aleatória (`RandomForestClassifier`)
+  * Gradient Boosting (`GradientBoostingClassifier`)
+
+### Bibliotecas Utilizadas
+
+* `pandas` e `numpy` — Manipulação e análise de dados
+* `matplotlib` e `seaborn` — Visualização gráfica e matrizes de confusão
+* `scikit-learn` — Pré-processamento (`StandardScaler`, `Pipeline`), divisão de dados e algoritmos de ML
+* `kagglehub` e `openpyxl` — Download e leitura dos datasets
+
+ ### Como Executar
+
+1. Abra o arquivo `Exercicio__Árvore_de_Decisão_Floresta_Aleatória_e_Boosting_Livia_Oliveira_6A_Manhãipynb.ipynb` no **Google Colab**.
+2. Certifique-se de que todas as bibliotecas necessárias estejam instaladas.
+3. Execute as células em ordem para visualizar a análise exploratória, o treinamento dos modelos, as matrizes de confusão e os resumos comparativos.
+
+###  Conclusão
+
+De modo geral, os algoritmos de **Ensemble (Random Forest e Gradient Boosting)** apresentaram os resultados mais robustos e equilibrados na maioria dos testes. No entanto, o **SVM (especialmente nos kernels Linear e RBF)** mostrou-se extremamente competitivo quando os dados foram devidamente padronizados via `Pipeline` com `StandardScaler`.
+
+---
