@@ -162,7 +162,7 @@ Acessando o arquivo **`Comparação_de_AutoML_com_Iris_Livia_Oliveira_6_A_Manha.
 | **Auto-Sklearn** | `StandardScaler` + `LDA` | 0.9750 | 1.0000 | Dentro do limite de 60s |
 
 ### Bibliotecas Utilizadas
-* `flaml` e `auto-sklearn2` — Frameworks de AutoML[cite: 1]
+* `flaml` e `auto-sklearn2` — Frameworks de AutoML
 * `scikit-learn` — Carregamento do dataset (`load_iris`), divisão estratificada (`train_test_split`) e métricas de avaliação (`classification_report`, `confusion_matrix`);
 * `pandas` e `numpy` — Manipulação de dados;
 * `matplotlib` — Plotagem das matrizes de confusão e gráfico comparativo.
