@@ -141,3 +141,33 @@ A tabela abaixo resume o apredizado supervisionado de melhor desempenho para cad
 De modo geral, os algoritmos de **Ensemble (Random Forest e Gradient Boosting)** apresentaram os resultados mais robustos e equilibrados na maioria dos testes. No entanto, o **SVM (especialmente nos kernels Linear e RBF)** mostrou-se extremamente competitivo quando os dados foram devidamente padronizados via `Pipeline` com `StandardScaler`.
 
 ---
+
+## AutoML (FLAML vs Auto-Sklearn)
+Como oitava atividade, utilizamos novamente o dataset **Iris** para explorar e comparar frameworks de *Automated Machine Learning* (**AutoML**), automatizando as etapas de pré-processamento, seleção de algoritmos e ajuste de hiperparâmetros com um limite de tempo (*time budget*) fixo de 60 segundos.
+
+Acessando o arquivo **`Comparação_de_AutoML_com_Iris_Livia_Oliveira_6_A_Manha.ipynb`**, você terá acesso a:
+* Documentação das instruções e etapas da atividade;
+* Códigos desenvolvidos e comentados para ambos os frameworks;
+* Relatórios de classificação e matrizes de confusão.
+
+### Frameworks Testados
+* **FLAML** (*Fast and Lightweight AutoML*): Selecionou o algoritmo `LGBMClassifier` como o melhor estimador.
+* **Auto-Sklearn** (`auto-sklearn2`): Selecionou um pipeline composto por `StandardScaler` + `LDA` (*Linear Discriminant Analysis*).
+
+### Comparação de Resultados (Conjunto de Teste)
+
+| Framework | Melhor Pipeline / Modelo | Acurácia (Validação/Treino) | Acurácia (Teste) | Tempo para o Melhor Modelo |
+|---|---|---|---|---|
+| **FLAML** | `LGBMClassifier` | 0.9667 | 0.9000 | ~11.9s (treinamento final em 0.015s) |
+| **Auto-Sklearn** | `StandardScaler` + `LDA` | 0.9750 | 1.0000 | Dentro do limite de 60s |
+
+### Bibliotecas Utilizadas
+* `flaml` e `auto-sklearn2` — Frameworks de AutoML[cite: 1]
+* `scikit-learn` — Carregamento do dataset (`load_iris`), divisão estratificada (`train_test_split`) e métricas de avaliação (`classification_report`, `confusion_matrix`);
+* `pandas` e `numpy` — Manipulação de dados;
+* `matplotlib` — Plotagem das matrizes de confusão e gráfico comparativo.
+
+### Fontes de Consulta
+* Roteiro e instruções disponibilizados pelo Professor Fabiano;
+* Documentação oficial das bibliotecas *FLAML* e *Scikit-Learn*.
+---
