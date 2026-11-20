@@ -171,3 +171,39 @@ Acessando o arquivo **`Comparação_de_AutoML_com_Iris_Livia_Oliveira_6_A_Manha.
 * Roteiro e instruções disponibilizados pelo Professor Fabiano;
 * Documentação oficial das bibliotecas *FLAML* e *Scikit-Learn*.
 ---
+## Regressão Linear e Regularização (Dataset Diabetes)
+Como nona atividade da disciplina, exploramos modelos de **Aprendizado Supervisionado para Regressão**, utilizando o dataset didático **`load_diabetes`** (`scikit-learn`) para prever uma medida quantitativa da progressão da doença após um ano. A atividade envolveu análise exploratória, construção de modelos simples e múltiplos, análise de resíduos, prevenção de vazamento de dados (*data leakage*) com `Pipeline` e ajuste de regularização via validação cruzada (*K-Fold*).
+
+Acessando o arquivo **`Regressao_ScikitLearn_Diabetes_Aula_Guiada_Colab.ipynb`** (ou o nome que você salvou no GitHub), você terá acesso a:
+- Fundamentação teórica e prática guiada sobre regressão;
+- Códigos desenvolvidos e executados com gráficos de dispersão, correlação e análise de resíduos;
+- Respostas fundamentadas das 9 questões avaliativas e mini-relatório técnico.
+
+### Modelos Testados e Comparação de Resultados (Teste)
+
+Os dados (442 observações e 10 atributos numéricos já centralizados e escalados) foram divididos em 80% para treino e 20% para teste (`random_state=42`) antes de qualquer transformação.
+
+| Modelo | MAE (Teste) | RMSE (Teste) | R² (Teste) | Observação |
+|---|---|---|---|---|
+| **Baseline (Média)** | ~64,01 | — | -0,012 | Preditor trivial (piso de referência) |
+| **Regressão Linear Simples (`bp`)** | 57,224 | 66,177 | 0,173 | Baixo poder explicativo isolado |
+| **Regressão Linear Simples (`bmi`)** | 52,260 | 63,732 | 0,233 | Melhor atributo individual |
+| **Regressão Linear Múltipla** | ~42,79 | ~53,85 | ~0,453 | Uso conjunto dos 10 atributos |
+| **Ridge (`alpha=1.0` via CV)** | ~42,86 | — | ~0,457 | Regularização L2 com `StandardScaler` |
+
+### Principais Conclusões Técnicas
+
+1. **Superioridade dos Modelos Multivariados**: Utilizar todos os 10 atributos em conjunto reduziu significativamente o erro médio absoluto (MAE de ~52,26 para ~42,79) e elevou o $R^2$ para cerca de 0,45 em comparação aos modelos simples e ao baseline.
+2. **Regularização L2 (Ridge) e Validação Cruzada**: A validação cruzada (*5-Fold*) no treino indicou `alpha=1.0` como melhor parâmetro ($\text{MAE}_{CV} = 44,999 \pm 1,808$), ajudando a estabilizar os coeficientes sem provocar *underfitting* (observado quando `alpha=100.0` elevou o erro para $46,047$).
+3. **Diagnóstico de Resíduos e Limitações Clínicas**: A análise gráfica dos resíduos revelou heterocedasticidade (dispersão maior em previsões altas) e presença de *outliers* (erros superiores a $\pm 130$). Por explicar menos da metade da variância e utilizar dados em escala transformada, o modelo tem caráter **estritamente didático** e não deve ser utilizado para decisões clínicas.
+
+### Bibliotecas Utilizadas
+- `scikit-learn`, Dataset (`load_diabetes`), divisão (`train_test_split`), pré-processamento (`StandardScaler`, `PolynomialFeatures`), `Pipeline`, validação cruzada (`KFold`, `cross_validate`, `GridSearchCV`), modelos (`DummyRegressor`, `LinearRegression`, `Ridge`) e métricas (`mean_absolute_error`, `mean_squared_error`, `r2_score`);
+- `pandas` e `numpy`  (Manipulação e organização dos resultados);
+- `matplotlib` (Plotagem de histogramas, dispersão, matriz de correlação e gráficos de resíduos).
+
+### Fontes de Consulta
+- Roteiro e notebook guiado disponibilizados pelo Professor Fabiano;
+- Documentação oficial do *Scikit-Learn* (Linear Models, Cross-validation e Pipelines).
+
+---
